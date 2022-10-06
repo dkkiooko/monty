@@ -12,7 +12,7 @@
 /**
  * struct var_s - struct to contain the main variables of the Monty
  * interpreter
- * @queue: flag to determine if in stack or queue mode 
+ * @queue: flag to determine if in stack or queue mode
  * @stack_len: length of the stack or queue
  */
 typedef struct var_s
@@ -29,7 +29,7 @@ extern var_t var;
 
 /**
  * struct stack_s - doubly linked list representation of a stack or queue
- * @n: integer 
+ * @n: integer
  * @prev: points to the previous element of the stack or queue
  * @next: points to the next element of the stack or queue
  * 
@@ -49,7 +49,7 @@ typedef struct stack_s
  * @f: function to handle the opcode
  * 
  * Description: opcode and its function for
- * stack, queue, LIFO, FIFO, ALX 
+ * stack, queue, LIFO, FIFO, ALX
  * 
  */
 typedef struct instruction_s
@@ -65,5 +65,20 @@ stack_t *add_node(stack_t **stack, const int n);
 void free_stack(int status, void *arg);
 void m_fs_close(int status, void *arg);
 void free_lineptr(int status, void *arg);
+void m_pint(stack_t **stack, unsigned int line_number);
+void m_pop(stack_t **stack, unsigned int line_number);
+void m_swap(stack_t **stack, unsigned int line_number);
+void m_add(stack_t **stack, unsigned int line_number);
+void m_nop(stack_t **stack, unsigned int line_number);
+void m_sub(stack_t **stack, unsigned int line_number);
+void m_mul(stack_t **stack, unsigned int line_number);
+void m_div(stack_t **stack, unsigned int line_number);
+void m_mod(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void m_stack(stack_t **stack, unsigned int line_number);
+void m_queue(stack_t **stack, unsigned int line_number);
+void m_pchar(stack_t **stack, unsigned int line_number);
+void m_pstr(stack_t **stack, unsigned int line_number);
 
 #endif /* _MONTY_H_ */

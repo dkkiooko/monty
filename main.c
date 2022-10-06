@@ -6,7 +6,7 @@ var_t var;
 /**
  * main - Monty bytecody interpreter
  * @argc: number of arguments passed
- * @argv: array of argument strings 
+ * @argv: array of argument strings
  * 
  * Return: EXIT_SUCCESS on success of EXIT_FAILURE On failure
  */

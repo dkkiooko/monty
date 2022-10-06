@@ -7,7 +7,7 @@
  * 
  * Description: the function will add the node to the beginning if
  * in stack mode and the end if in queue mode
- *  
+ * 
  * Return: pointer to the new node, or NULL on failure
  */
 stack_t *add_node(stack_t **stack, const int n)
